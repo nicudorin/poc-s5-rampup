@@ -10,7 +10,7 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("/application.properties")
 public class S5RampupApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(S5RampupApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(S5RampupApplication.class, args);
+    }
 }

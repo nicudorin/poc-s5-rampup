@@ -6,8 +6,8 @@
 <mapper namespace="com.s5.rampup.s5rampup.persistence.PersonMapper">
 
     <insert id="createPerson" parameterType="Person" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO people (id, first_name, last_name)
-        VALUES      (#{id}, #{firstName}, #{lastName})
+        INSERT INTO people (first_name, last_name)
+        VALUES      (#{firstName}, #{lastName})
     </insert>
 
     <update id="updatePerson" parameterType="Person">

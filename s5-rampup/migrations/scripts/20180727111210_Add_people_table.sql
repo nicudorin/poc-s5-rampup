@@ -1,9 +1,11 @@
---// First migration.
+--// Add people table
 -- Migration SQL that makes the change goes here.
+
+CREATE SEQUENCE people_id_seq;
 
 CREATE TABLE public.people
 (
-    id bigint NOT NULL,
+    id integer NOT NULL DEFAULT nextval('people_id_seq'::regclass),
     first_name character(50) COLLATE pg_catalog."default" NOT NULL,
     last_name character(50) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT people_pkey PRIMARY KEY (id)
